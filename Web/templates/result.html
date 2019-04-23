@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+          margin: 0;
+      }
+
+      ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 10%;
+          background-color: #f1f1f1;
+          position: fixed;
+          height: 100%;
+          overflow: auto;
+      }
+
+      li a {
+          display: block;
+          color: #000;
+          padding: 10px 0 9px 16px;
+          text-decoration: none;
+      }
+
+      li a.active {
+          background-color: #4CAF50;
+          color: white;
+      }
+
+      li a:hover:not(.active) {
+          background-color: #555;
+          color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a  onclick="window.location.href='/inputs'">
+            <img src="C:\Users\Cookie Monster\Desktop\Web\pics\home.png" alt="HTML tutorial" style="width:120px;height:120px;border:0;">
+          </a>
+      </li><br><br><br>
+          
+      <li><a onclick="window.location.href='/search'"">
+            <img src="C:\Users\Cookie Monster\Desktop\Web\pics\search.png" alt="HTML tutorial" style="width:115px;height:115px;border:0;">
+          </a>
+      </li>
+    </ul>
+
+    <div style="margin-left:150px;padding:1px 16px;height:1000px;">
+      <h2>Hey, we found some possible options for you !</h2>
+      <h3>You can select a new major and region</h3>
+      <p><label>Major interested:</label><br>
+       <select id = "myList">
+        <option value=""></option>
+        <option value="Architecture">Architecture</option>
+        <option value="Computer Engineering">Computer Engineering</option>
+        <option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering</option>
+        <option value="Industrial Engineering">Industrial Engineering</option>
+        <option value="Civil Engineering">Civil Engineering</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="Management Information">Management Information</option>
+        <option value="systems">systems</option>
+        <option value="Material Engineering">Material Engineering</option>
+        <option value="Interpretership">Interpretership</option>
+        <option value="Arabic Teaching">Arabic Teaching</option>
+        <option value="School Science Teaching">School Science Teaching</option>
+        <option value="Primary School Math Teaching">Primary School Math Teaching</option>
+        <option value="Pre-school Teaching">Pre-school Teaching</option>
+        <option value="Guidance and Psychological Counseling">Guidance and Psychological Counseling</option>
+        <option value="Teaching">Teaching</option>
+        <option value="Social Science Teaching">Social Science Teaching</option>
+        <option value="Turkish Teaching">Turkish Teaching</option>
+        <option value="Archaeology">Archaeology</option>
+        <option value="Biology">Biology</option>
+        <option value="Math">Math</option>
+        <option value="Art History">Art History</option>
+        <option value="History">History</option>
+        <option value="Turkish Language and Literature">Turkish Language and Literature</option>
+        <option value="Food Engineering">Food Engineering</option>
+        <option value="Midwifery">Midwifery</option>
+        <option value="Nursing">Nursing</option>
+        <option value="Tourism Business">Tourism Business</option>
+        <option value="Science Teaching">Science Teaching</option>
+        <option value="Geography Teaching">Geography Teaching</option>
+        <option value="Contemporary Turkish Dialects and Literatures">Contemporary Turkish Dialects and Literatures</option>
+        <option value="Philosophy">Philosophy</option>
+        <option value="Molecular Biology and Genetics">Molecular Biology and Genetics</option>
+        <option value="Sociology">Sociology</option>
+        <option value="Interior Architecture">Interior Architecture</option>
+        <option value="Cinema and Television">Cinema and Television</option>
+        <option value="Law">Law</option>
+        <option value="Economy">Economy</option>
+        <option value="Finance">Finance</option>
+        <option value="Islamic Sciences">Islamic Sciences</option>
+        <option value="Biomedical Engineering">Biomedical Engineering</option>
+        <option value="Electrical Engineering">Electrical Engineering</option>
+        <option value="Map Engineering">Map Engineering</option>
+        <option value="Chemistry Engineering">Chemistry Engineering</option>
+        <option value="Mining Engineering">Mining Engineering</option>
+        <option value="Mechatronic Engineering">Mechatronic Engineering</option>
+        <option value="Metallurgy and Materials Engineering">Metallurgy and Materials Engineering</option>
+        <option value="Automotive Engineering">Automotive Engineering</option>
+        <option value="Gastronomy and Kitchen Arts">Gastronomy and Kitchen Arts</option>
+        <option value="Tourism Guidance">Tourism Guidance</option>
+        <option value="Veterinary">Veterinary</option>
+        <option value="Nutrition and Dietetics">Nutrition and Dietetics</option>
+        <option value="Physical Therapy and Rehabilitation">Physical Therapy and Rehabilitation</option>
+        <option value="Health Management">Health Management</option>
+        <option value="Medicine">Medicine</option>
+        <option value="Dentistry">Dentistry</option>
+        <option value="German Language and Literature">German Language and Literature</option>
+        <option value="Geography">Geography</option>
+        <option value="Antic Greek Language and Literature">Antic Greek Language and Literature</option>
+        <option value="English Language and Literature">English Language and Literature</option>
+        <option value="Psychology">Psychology</option>
+        <option value="English Teaching">English Teaching</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Space Sciences and Technologies">Space Sciences and Technologies</option>
+        <option value="Econometric">Econometric</option>
+        <option value="International Relations ">International Relations </option>
+        <option value="Theology">Theology</option>
+        <option value="Journalism">Journalism</option>
+        <option value="Public Relations and Promotion">Public Relations and Promotion</option>
+        <option value="Radio Television and Cinema">Radio Television and Cinema</option>
+        <option value="Environmental Engineering">Environmental Engineering</option>
+        <option value="Geology Engineering">Geology Engineering</option>
+        <option value="Water Product Engineering">Water Product Engineering</option>
+        <option value="Agricultural Economy">Agricultural Economy</option>
+        <option value="Political Science and Public Administration">Political Science and Public Administration</option>
+        <option value="City and Region Planning">City and Region Planning</option>
+        <option value="Russian Language and Literature">Russian Language and Literature</option>
+        <option value="German Teaching">German Teaching</option>
+        <option value="Computer Teaching">Computer Teaching</option>
+        <option value="French Teaching">French Teaching</option>
+        <option value="Public Relations and Advertising">Public Relations and Advertising</option>
+        <option value="Communication Design and Management">Communication Design and Management</option>
+        <option value="Language and Speech Therapy">Language and Speech Therapy</option>
+        <option value="Social Service">Social Service</option>
+        <option value="Tourisim Business">Tourisim Business</option>
+        <option value="American Culture and Literature">American Culture and Literature</option>
+        <option value="Anthropology">Anthropology</option>
+        <option value="Arabic Language and Literature">Arabic Language and Literature</option>
+        <option value="Modern Turkish Dialect and Literature">Modern Turkish Dialect and Literature</option>
+        <option value="Modern Greek Language and Literature">Modern Greek Language and Literature</option>
+        <option value="Linguistic">Linguistic</option>
+        <option value="Persian Language and Literature">Persian Language and Literature</option>
+        <option value="French Language and Literature">French Language and Literature</option>
+        <option value="Hittitology">Hittitology</option>
+        <option value="Hungarology">Hungarology</option>
+        <option value="Spanish Language and Literature">Spanish Language and Literature</option>
+        <option value="Italian Language and Literature">Italian Language and Literature</option>
+        <option value="Japanese Language and Literature">Japanese Language and Literature</option>
+        <option value="Clasic Archaeology">Clasic Archaeology</option>
+        <option value="Korean Language and Literature">Korean Language and Literature</option>
+        <option value="Latin Language and Literature">Latin Language and Literature</option>
+        <option value="Sinology">Sinology</option>
+        <option value="Greek Language and Literature">Greek Language and Literature</option>
+        <option value="Pharmacy">Pharmacy</option>
+        <option value="Astronomy and Space Science  ">Astronomy and Space Science  </option>
+        <option value="Physics">Physics</option>
+        <option value="Statistics">Statistics</option>
+        <option value="Geophysic Engineering">Geophysic Engineering</option>
+        <option value="Child Development">Child Development</option>
+        <option value="Landscape Architecture">Landscape Architecture</option>
+        <option value="Milk Technology">Milk Technology</option>
+        <option value="Agricultural Machinery and Technologies Engineering">Agricultural Machinery and Technologies Engineering</option>
+        <option value="Livestock">Livestock</option>
+        <option value="Public Administration">Public Administration</option>
+        <option value="Biology Teaching">Biology Teaching</option>
+        <option value="Philosophy Teaching">Philosophy Teaching</option>
+        <option value="Math Teaching">Math Teaching</option>
+        <option value="Fiber and Polymer Engineering">Fiber and Polymer Engineering</option>
+        <option value="Physics Teaching">Physics Teaching</option>
+        <option value="Chemistry Teaching">Chemistry Teaching</option>
+        <option value="History Teaching">History Teaching</option>
+        <option value="Logistic Management">Logistic Management</option>
+        <option value="Interpretation-Interpretership">Interpretation-Interpretership</option>
+        <option value="History ">History </option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Physical Therapy and Rehabilitation ">Physical Therapy and Rehabilitation </option>
+        <option value="Movie Design and Management">Movie Design and Management</option>
+        <option value="International Business and Trade">International Business and Trade</option>
+        <option value="Geophysics Engineering">Geophysics Engineering</option>
+        <option value="Textile Engineering">Textile Engineering</option>
+        <option value="Biochemistry">Biochemistry</option>
+        <option value="Advertising">Advertising</option>
+        <option value="Bioengineering">Bioengineering</option>
+        <option value="Agricultural Machinery and Technologies Engineering  ">Agricultural Machinery and Technologies Engineering  </option>
+        <option value="Political Science">Political Science</option>
+        <option value="Communication">Communication</option>
+        <option value="Industrial Products Design">Industrial Products Design</option>
+        <option value="Nutrition and Dietetics ">Nutrition and Dietetics </option>
+        <option value="Energy System Engineering">Energy System Engineering</option>
+        <option value="Spor Management">Spor Management</option>
+        <option value="International Business">International Business</option>
+        <option value="Medicine Engineering">Medicine Engineering</option>
+        <option value="Chemisty">Chemisty</option>
+        <option value="Software Engineering">Software Engineering</option>
+      </select>
+     </p>
+     <p><label>Region:</label><br>
+       <select id = "myList">
+        <option value=""></option>
+        <option value="North">North</option>
+        <option value="East">East</option>
+        <option value="West">West</option>
+        <option value="South">South</option>
+      </select>&nbsp;
+      <input class="MyButton" type="button" value="Submit" onclick="window.location.href='C:/Users/Rukruk/Desktop/Projects/DSS/nav.html'" />
+    </p>
+     <p>Some text..</p>
+   </div>
+ </body>
+</html>

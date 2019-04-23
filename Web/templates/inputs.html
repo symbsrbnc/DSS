@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+  <head>
+     <script type="text/javascript">
+     function populate(t,m){
+       var t=document.getElementById(t);
+       var m=document.getElementById(m);
+       m.innerHTML="";
+        if(t.value=="SAY"){
+         var optionArray =["|","architecture|Architecture","computer engineering|Computer Engineering",
+         "electrical and electronics engineering|Electrical and Electronics Engineering","industrial engineering|Industrial Engineering","civil engineering|Civil Engineering","mechanical engineering|Mechanical Engineering",
+         "math|Math","biology|Biology","pharmacy|Pharmacy","software engineering|Software Engineering","chemisty|Chemisty","medicine|Medicine",         
+         "school science teaching|School Science Teaching", 'midwifery|Midwifery','nursing|Nursing','biomedical engineering|Biomedical Engineering','mechatronic engineering|Mechatronic Engineering',
+        'molecular biology and genetics|Molecular Biology and Genetics','nutrition and dietetics|Nutrition and Dietetics',
+        'physical therapy and rehabilitation|Physical Therapy and Rehabilitation', 'map engineering|Map Engineering','veterinary|Veterinary',
+        'dentistry|Dentistry','astronomy and space science|Astronomy and Space Science  ',  'physics|Physics', 'mechatronic engineering|Mechatronic Engineering',
+        'computer science|Computer Science','environmental engineering|Environmental Engineering','automotive engineering|Automotive Engineering', 'interior architecture|Interior Architecture'];
+        }
+        else if(t.value=="SOZ"){
+         var optionArray =["|",'art history|Art History', 'history|History','pre-school teaching|Pre-school Teaching', 'social science teaching|Social Science Teaching', 'turkish language and literature|Turkish Language and Literature',
+        'turkish teaching|Turkish Teaching', 'islamic sciences|Islamic Sciences','cinema and television|Cinema and Television','contemporary turkish dialects and literatures|Contemporary Turkish Dialects and Literatures',
+        'gastronomy and kitchen arts|Gastronomy and Kitchen Arts', 'geography|Geography', 'journalism|Journalism','public relations and promotion|Public Relations and Promotion', 'radio television and cinema|Radio Television and Cinema',
+        'theology|Theology', 'communication design and management|Communication Design and Management','public relations and advertising|Public Relations and Advertising', 'hittitology|Hittitology', 'geography teaching|Geography Teaching',  'movie design and management|Movie Design and Management'];
+        }
+        else if(t.value=="EA"){
+         var optionArray =["|",'Management Information Systems','Guidance and Psychological Counseling','Social Service', 
+         'Finance', 'Health Management', 'Law', 'Sociology', 'International Relations', 'Agricultural Economy',
+        'Archaeology', 'Econometric', 'International Relations ','Philosophy', 'Psychology', 'Tourism Business', 'Anthropology',
+        'Clasic Archaeology','Political Science and Public Administration', 'Public Administration','International Business and Trade',
+        'Logistic Management','Political Science', 'Spor Management'];
+        }
+        else if(t.value=="DIL"){
+         var optionArray =["|",'Interpretership', 'Arabic Teaching','Tourism Guidance', 'English Language and Literature',
+        'English Teaching', 'German Language and Literature','French Teaching', 'German Teaching','Russian Language and Literature',
+        'American Culture and Literature','Arabic Language and Literature', 'French Language and Literature',
+        'Hungarology', 'Italian Language and Literature','Japanese Language and Literature',
+        'Korean Language and Literature', 'Latin Language and Literature','Linguistic', 'Modern Greek Language and Literature',
+        'Persian Language and Literature', 'Sinology','Spanish Language and Literature','Interpretation-Interpretership'];
+        }
+      for(var option in optionArray){
+          var pair = optionArray[option].split("|");
+          var newOption=document.createElement("option");
+          newOption.value=pair[0];
+          newOption.innerHTML=pair[1];
+          m.options.add(newOption);
+        }
+       }
+     </script> 
+    <title>FORM</title>
+    <meta charset = "UTF-8" />
+ </head>
+  <body>    
+      <style>
+      body {
+        background-color: #ffffff;
+      }
+
+      fieldset{
+        background-color: #E5E5E5; 
+      }
+      .centering-thing {
+        text-align: center;
+      }
+      p{
+        text-align: center;
+      }
+      form{
+        text-align: center;
+      }
+      h3{
+        text-align: center;
+      }
+      select#test{
+        min-width:300px;
+      }
+      select#major{
+        min-width:300px;
+      }
+      select#region{
+        min-width:300px;
+      }
+    </style>
+
+    
+    <div class="container centering-thing">
+      <img src="https://i.imgur.com/w8Ktpnr.png" alt="logo" width=300 height=/>
+      </div>
+      <h3>Please fill in all details below</h3>
+    <form action=""   method="post">
+      <fieldset>          
+        Score:<br>
+       <input type="text" name="score"><br><br>
+        Ranking:<br>
+       <input type="text" name="ranking">
+       <p>
+         <label>Type of test:</label><br>
+         <select id = "test" name="test"  onchange="populate('test','major')">
+            <option value=""></option>
+            <option value="DIL">DIL</option>
+            <option value="EA">EA</option>
+            <option value="SAY">SAY</option>
+            <option value="SOZ">SOZ</option>
+         </select>
+       </p>
+       <p>
+       <p>
+         <label>Major interested:</label><br>
+         <select id = "major" name="major"></select>
+       </p>
+         <label>Region:</label><br>
+         <select id = "region" name="region">
+            <option value=""></option>
+            <option value="North">North</option>
+            <option value="East">East</option>
+            <option value="West">West</option>
+            <option value="South">South</option>
+         </select>
+       </p>
+       <br><input class="MyButton" type="button" value="Submit" onclick="window.location.href='/result'" />
+       </fieldset>
+    </form>
+  </body>
+</html>
